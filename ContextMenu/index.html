@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="script.js"></script>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+<script>
+	(function() {
+		var menuExample = [{
+			title: 'View',
+			submenu: [{
+				title: 'Big icons',
+				action: function () {console.log('emailed')}
+			}, {
+				title: 'Small icons',
+				action: function () {console.log('skyped')}
+			}]
+		}, {
+			title: 'Sorting',
+			submenu: [{
+				title: 'Name',
+				action: function () {console.log('emailed')}
+			}, {
+				title: 'Date',
+				action: function () {console.log('skyped')}
+			},{
+				title: 'Size',
+				action: function () {console.log('skyped')}
+			}]
+		}, {
+			title: 'Update',
+			action: function () {console.log('edit content')}
+		}];
+	window.cn = new ContextMenu(document.documentElement,menuExample);
+	}());
+</script>
+</body>
+</html>
