@@ -8,6 +8,9 @@
 			);
 		return $mysqli_function;
 	}
+	function connectClose($connect){
+            return $connect->close();
+        }
 
 	if(isset($_POST['add-note'])) {
 		if(!empty($_POST['user-note']) ) {
@@ -53,6 +56,7 @@
 				echo "</div>";
 			}
 			while($rows = $result -> fetch_assoc());
+			connectClose($mysqli);
 		}
 	}
 	showUsers();
